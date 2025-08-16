@@ -65,7 +65,7 @@ KECAE was rigorously evaluated on two large, public datasets (OAI and MOST) and 
 
 ## Installation
 
-**Clone the repository:**
+1.  **Clone the repository:**
     ```bash
     git clone [https://github.com/ZWang78/KECAE.git](https://github.com/ZWang78/KECAE.git)
     cd KECAE
