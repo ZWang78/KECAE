@@ -13,6 +13,9 @@ Knee Osteoarthritis (KOA) is a widespread degenerative joint disease where early
 
 To address this data scarcity challenge, we propose the **Key-Exchange Convolutional Auto-Encoder (KECAE)**, a novel AI-driven data augmentation framework. KECAE is designed to generate new, synthetic knee X-ray images that are not only diverse but also maintain clinical and anatomical plausibility. By enriching the training data in this manner, KECAE significantly enhances the performance and generalization capabilities of downstream KOA classification models.
 
+![KECAE Flowchart](newflow.png)
+*Figure 1: Flowchart of the proposed KECAE model. The framework disentangles, exchanges, and recombines key pathological features with non-key anatomical backgrounds to synthesize new data.*
+
 ## Methodology: The KECAE Framework
 
 The core innovation of KECAE is its unique **key-exchange mechanism**, which operates on the principle of disentangling and recombining distinct features within knee X-ray images.
@@ -41,8 +44,6 @@ During training, the model processes two input images simultaneously ($X_1$ from
     * $h_1' = h_1^N + h_2^K$ (Healthy background + OA key features)
     * $h_2' = h_2^N + h_1^K$ (OA background + Healthy key features)
 4.  The decoder then generates two new, synthetic key-exchanged images, $X_1'$ and $X_2'$, from these composite vectors.
-
-*Figure 1: Flowchart of the proposed KECAE model. The framework disentangles, exchanges, and recombines key pathological features with non-key anatomical backgrounds to synthesize new data.*
 
 ### 4. Hybrid Loss Function
 
